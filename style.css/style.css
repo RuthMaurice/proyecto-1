@@ -1,0 +1,376 @@
+
+
+:root {
+    --agua: #48c9b0;
+    --blanco: #ffffff;
+    --amarillo:#f1c40f;
+    --primario: #FFC107;
+    --gris: #757575; 
+    --rosita:#f48fb1;
+    --moradito:#ba68c8 ;
+    --negro:#000000 ; 
+    --moraoscu: #B40486;
+}
+
+html {
+    font-size: 10px;
+ /*   box-sizing: border-box;/*connestas lineas podes crear una caja para que mantenga el tañano que asigans en este caso a la imagen, pero afecta a todo*/
+/*     *, *:before, *:after{    /*la coma es para que si tengo 2 archivos que usan las mimas lineas pongo , y el comre y usa los mismos comandos*/
+    /*ejemplo de usar la ,*/
+   /* .titulo, .subtitulo{   podemos ver que son 2 distintos pero usan lo mismos comandos
+        text-align: center;
+        font-size: 3.8rem;
+    }*/
+   /* box-sizing: inherit;
+
+} */
+}
+
+/*
+* {
+    border-color: #000000;
+    border-style: solid;
+}
+*/
+
+
+body {
+
+
+
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    background-image: linear-gradient(to top,#f89db4,#ffffff 100%);
+}/* en backgrond si coloco to top va de abajo par aarriva el degradado
+el porcentaje es respecto a todo la paguina se va segradando el color a menor porcntaje 
+es mas tosco, va a llegar a ese porcentaje de la quina total
+  con to botton  de arriba a abajo y esta to left y to rigth*/
+
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+
+
+
+
+.titulo {
+    
+    
+    color:var(--rosita);
+    
+    
+}
+ 
+.titulo span {
+    font-size: 2rem
+
+}
+
+
+.contenedor {
+    max-width: 120rem;/*este comando hace que cuando se agrande o agrande o achique la paguina se acomoda la barra que esta aca(barra morada)*/
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+/*como centrar 3n este caso los link del principio*/
+
+    /*otra forma de hacer lo mismo para centrarlo*/
+    margin: 0 auto 0 auto;
+}
+ .navegacion-principal {
+   /*padding: 1rem;*/
+     display: flex;
+     flex-direction: column;
+     
+ }
+
+
+
+
+ .nav-bg {
+    background-color: var(--moradito);
+ }
+
+
+ .navegacion-principal a {
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;/*para ponerlo en negritas*/
+    padding: 1rem;/*para enssanchar la barra morada donde esobre i clienmte etc */
+ }
+ .navegacion-principal a:hover {
+    background-color: var(--rosita);
+    color: var(--negro);
+ }
+
+ .hero{
+    background-image: url(../img/compu2.jpg);
+    background-repeat: no-repeat;/*para que  no se re`pita varias veces la imagen*/
+    background-size: cover;/*toma todo el ancho de la pagina y rellena*/
+    height: 500px;/* para el largo de la imagen*/
+    position: relative;
+    margin-bottom: 2rem;/*para que quede separada de la parte de abajo a la imagen*/
+
+}
+.contenido-hero {
+   position:absolute;
+   background-color:rgba(0,0,0,.8); /*estos 3 comandos son para crear el degrado sobre la imagen*/
+   width:100%;
+   height: 100%;
+   
+ /*para que todo lo que tengo en esta seccion me quede centrado tanto vertical 
+ como horizontalmente debo usar los comandos de abajo*/
+   display: flex;/*se coloca el contenido de izquierda a derecha */
+   flex-direction: column;/* hace que el contenido se pongsa en columna*/
+     align-items: center;/*para centrat verticalmente*/
+   justify-content: center;/* cnetra en texto*/
+}
+
+
+.contenido-hero h2,
+.contenido-hero p {
+    color:var(--moraoscu);
+}
+
+
+.boton{
+    background-color: #ba68c8;
+    color: #ffffff;
+    padding: 1rem 3rem;/* es el espacio entreel texto y al rededor*/
+    margin-top:3rem;/*para separa de cualquier texto margien etc que tenga cerca */
+    font-size: 2rem;/*para agrandar el tamaño de las letras*/
+    text-decoration: none;/*para quitar la linea de dejado del link*/
+    text-transform: uppercase;/*para pasar las letras de minusculas a mayusculas*/
+    font-weight: bold;/*para que las letras se pongasn en negrita*/
+    border-radius: .5rem;/*para redondeaar los bordes del boton*/
+    width: 90%; /*para que el boton abarqur en 90% de estacio horizontal  */
+    text-align: center;/*para centrar el texto*/
+   
+}
+
+
+    
+.boton:hover {
+    background-color: var(--rosita);
+    color: var(--negro);
+ }
+ 
+ .navegacion-principal a:hovºer {
+    background-color: var(--rosita);
+    color: var(--negro);
+ }
+
+ .servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+.sombra {
+    -webkit-box-shadow: 10px 8px 11px 5px rgba(0,0,0,0.48);
+-moz-box-shadow: 10px 8px 11px 5px rgba(0,0,0,0.48);
+box-shadow: 10px 8px 11px 5px rgba(0,0,0,0.48);
+background-color: var(--blanco);
+padding: 2rem;
+border-radius: 1rem;
+}
+
+
+@media (min-width:768px){
+    .boton{
+        width: auto;
+        }
+    }
+
+
+@media (min-width: 768px){ /*con esto cuando pase a dispositivos mas chicos se acomoda y reaqlizara los comandos que estan aca*/
+    .navegacion-principal{
+        flex-direction: row;/*en ves de mostrata la barra horizontal la mostrara  vertical caunsdop se achique la panmtalla*/
+        justify-content: space-between;
+        }
+    }
+
+@media (max-width: 700px){
+    .servicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /*grid-template-rows:repeat(3,1fr);*/
+    }
+}
+    
+
+.servicio {
+    /*para centrar los circulos de los iconos los rosa*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.servicio h3 {
+ color: var(--moraoscu);
+ font-weight: normal;
+}
+
+.servicio p {
+    /*es para que sea mas facil leer el texto le crea margen entre lineas*/
+    line-height: 2;
+    text-align: center;
+}
+
+ .servicio .iconos {
+ height: 15rem;
+ width: 15rem;
+ background-color: #f48fb1;
+ border-radius: 50%;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ }
+
+
+ /*formulario*/
+   
+
+.formulario {
+    /*background-color:var(--moradito);*/
+    background-image: linear-gradient(to top, var(--moradito),#f89db4 100%);/*para crear degradado de color*/
+    width: min(60rem,100%);/*toma el valor mas chico es el tamaño del romulario
+    realiza una comparacion de cual es el tamaño mas pequeño de esos 2 y se queda con el tamaño mas chico*/
+    margin: 0 auto; /**para centrar formularios  y cuyo padre no sea un display flez */
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.formulario fieldset {
+    border: none;/*para que saque las lineas de borde qe se arman cuando se coloca un formulario*/
+}
+
+.formulario legend {
+    text-align: center;/*para centrar el texto*/
+    font-size: 1.8rem;/*establece el tamaño de la fuente de un elemento en 1.8 veces el tamaño de la fuente raíz*/
+    text-transform: uppercase;/*para poner las letras en mayuscula*/
+    font-weight: 700;/*Esta propiedad se utiliza para definir el grosor, 700 es el peso negrita */
+    margin-bottom: 2rem;
+    color: var(--moraoscu);
+}
+.contenedor-campos{
+    box-sizing: border-box;
+}
+
+input, textarea {
+    box-sizing: border-box;
+}
+
+/*
+El box-sizing: border-box; asegura que el tamaño total de los elementos 
+incluya los bordes y el padding, evitando que el campo de entrada sobresalga. 
+Si no se aplica, el width del input solo se calcula por el contenido, sin tener en cuenta el padding y el border.
+
+Puedes aplicar esto de forma global o a los input específicamente en tu CSS:
+*/
+
+
+@media (min-width:768px ){
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;/*en ves de 50% 50% se puede poner  :repeat(2, 1fr); otra formas es 1fr 1fr;*/
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    
+    .campo:nth-child(3), 
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+
+
+}
+
+.campo {
+    margin-bottom: 1rem;
+
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.campo textarea {
+    height: 20rem;/*altura*/
+}
+
+
+
+
+  
+/*para pintar dentro de los cuadros donde se ingresa la informacion
+pero solo los que le indico*/
+
+/*
+.campo input[type="text"],input[type="email"]{
+    background-color: #e497cf;
+}
+*/
+
+/* para pintar todos los cuadros donde se ingresa la informacion
+ya que en input y textarea le agrege la clase input-tex*/
+
+.input-tex {
+    background-color:#f5bdcb;
+    width: 100%; /*es para que tome el 100% des espacio en horizontal*/
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
+
+.botonenvi{
+    background-color: #b12ac9;
+    color: #ffffff;
+    padding: 1rem 3rem;/* es el espacio entreel texto y al rededor*/
+    margin-top:3rem;/*para separa de cualquier texto margien etc que tenga cerca */
+    font-size: 2rem;/*para agrandar el tamaño de las letras*/
+    text-decoration: none;/*para quitar la linea de dejado del link*/
+    text-transform: uppercase;/*para pasar las letras de minusculas a mayusculas*/
+    font-weight: bold;/*para que las letras se pongasn en negrita*/
+    border-radius: .5rem;/*para redondeaar los bordes del boton*/
+    width: 90%; /*para que el boton abarqur en 90% de estacio horizontal  */
+    text-align: center;/*para centrar el texto*/
+    border: none;
+   
+}
+.botonenvi:hover {
+    cursor: pointer;
+    background-color: var(--rosita);
+    color: var(--blanco);
+
+}
+
+.enviar .botonenvi {
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+}
